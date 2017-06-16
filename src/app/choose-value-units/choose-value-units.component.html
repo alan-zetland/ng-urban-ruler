@@ -1,0 +1,21 @@
+<p>
+  choose-value-units works!
+  {{chosenUnit}}
+</p>
+<div *ngIf="selected">
+  Inside selected?
+  <form>
+      <h2>{{chosenType}}</h2>
+      <div class="form-group">
+        <label for="unitvalue">Value</label>
+        <input type="text" class="form-control" id="unitvalue" required>
+ 
+        <input type="text" class="form-control" id="unitscale">
+      </div>
+ 
+      <button type="submit" class="btn btn-success">Show Results</button>
+ 
+    </form>
+
+
+</div>

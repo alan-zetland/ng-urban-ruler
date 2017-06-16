@@ -5,3 +5,22 @@
   </h1>
 </div>
 
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 ">
+      <div class="form-group">
+        <label for="type">Choose Type of Measurement</label>
+        <select [(ngModel)]="selectedType" (change)="setSelection(selectedType)" class="form-control" name="type" required>
+          <option *ngFor="let type of UnitData" [value]="type.name">{{type.name}}</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+        <div class="col-xs-12">
+      <app-choose-value-units [chosenType]=selectedType [selected]=selected [chosenMeasureData]="UnitData"></app-choose-value-units>
+    </div>
+
+  </div>
+</div>
+
